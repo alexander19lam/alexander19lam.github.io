@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AL Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1 id="bannerText">Projects</h1>
+    <img id='bannerIMG' src="images/banner/projectBanner.jpg" alt="Projects">
+    <h1 id="header">Projects</h1>
+    <section>
+            <h1 class="sectionHeader">CPSC 581 <span>Project 2: Skittles Color Sorter</span></h1>
+            <img src="images/581Project2/IMP3.jpg">
+            <h2>Context</h2>
+            <p>
+                The goal of this project is to solve an everyday problem with an Arduino and the avaliable sensors.
+                Our group approached this project by first have each group member sketch and present their different ideas. 
+                In the end, we settled on creating a skittle color sorter as our project utilizing a color sensor.
+            </p>
+            <h2>Rough Sketches</h2>
+            <p>
+                For my initial 10 sketches, it is just a process of me trying to get down as many ideas as possible.
+                One interesting constraint that this project imposes is that the list of sensors and outputs are really basic.
+                With this point in mind, my initial sketches tried to demonstrate the possible uses with just these basic sensors.
+                I have approached these sketches with the sensor list on D2L in mind, so they are not complicated in their uses.
+                Most of my sketches are done by attempting the story board approach that was taught in lecture to demonstrate a scenario.
+                <br>
+                <br>
+                The following are my 10 Rough Sketches:
+                <div class="gallery">
+                    <img src="images/581Project2/Rough/Alex_Rough (1).jpg" alt="Rough Sketch">
+                    <img src="images/581Project2/Rough/Alex_Rough (2).jpg" alt="Rough Sketch">
+                    <img src="images/581Project2/Rough/Alex_Rough (3).jpg" alt="Rough Sketch">
+                    <img src="images/581Project2/Rough/Alex_Rough (4).jpg" alt="Rough Sketch">
+                    <img src="images/581Project2/Rough/Alex_Rough (5).jpg" alt="Rough Sketch">
+                    <img src="images/581Project2/Rough/Alex_Rough (6).jpg" alt="Rough Sketch">
+                    <img src="images/581Project2/Rough/Alex_Rough (7).jpg" alt="Rough Sketch">
+                    <img src="images/581Project2/Rough/Alex_Rough (8).jpg" alt="Rough Sketch">
+                    <img src="images/581Project2/Rough/Alex_Rough (9).jpg" alt="Rough Sketch">
+                    <img src="images/581Project2/Rough/Alex_Rough (10).jpg" alt="Rough Sketch">
+                </div>
+            </p>
+
+            <h2>Refined Sketches</h2>
+            <p>
+                The refined sketches that I created are based on the color sorter idea. 
+                Initially, our group expected to go with the Amazon Package detection idea as that was an idea a few of our group members liked, and we recieved feedback on it in class.
+                During the lecture where we presented our ideas, Joseph and Mitch was not able to make it, so the idea of the skittle color sorter that we settled on, that came from Joseph was not presented.
+                When we met up after the lecture, Joseph presented the idea of the skittle color sorter.
+                We started to have a discussion about it and it became a debate as to which skittle color is the best.
+                <br>
+                The entire group quite liked the idea of the skittle color sorter, so we decided to go forwards with this idea.
+                <br>
+                <br>
+                With this idea in mind, each group member went on to create their refined sketches.
+                My refined sketches is the first 3 images (sketches 1,2,3), and I attempted to explore the different ways a color sorter could be implemented, and the other potential items we can sort.
+                Michael's refined sketches (sketches 4,5,6) and Muhannad's refined sketches (sketches 7,8) also explored different sorters, and items that can be sorted.
+                Mitch's refined sketches (sketches 9,10) focused on other ideas that were not the color sorter.
+                Joseph sketches are design of our implementation, so his refined sketches could be seen in the implementation seciton.
+                <br>
+                <br>
+                The following are the 10 Refined Sketches:
+                <div class="gallery">
+                    <img src="images/581Project2/Refined/Alex_Refined (1).jpg" alt="Refined Sketch">
+                    <img src="images/581Project2/Refined/Alex_Refined (2).jpg" alt="Refined Sketch">
+                    <img src="images/581Project2/Refined/Alex_Refined (3).jpg" alt="Refined Sketch">
+                    <img src="images/581Project2/Refined/Michael_Refined (1).jpg" alt="Refined Sketch">
+                    <img src="images/581Project2/Refined/Michael_Refined (2).jpg" alt="Refined Sketch">
+                    <img src="images/581Project2/Refined/Michael_Refined (3).jpg" alt="Refined Sketch">
+                    <img src="images/581Project2/Refined/Muhannad_Refined (1).JPG" alt="Refined Sketch">
+                    <img src="images/581Project2/Refined/Muhannad_Refined (2).JPG" alt="Refined Sketch">
+                    <img src="images/581Project2/Refined/Mitch_Refined (1).jpg" alt="Refined Sketch">
+                    <img src="images/581Project2/Refined/Mitch_Refined (2).jpg" alt="Refined Sketch">
+                </div>
+            </p>
+            <h2>Implementation</h2>
+            <p>
+                <h3>Design and Sketches of Implementation</h3>
+                The main design of the final implementation of the skittle sorter could be seen through this sketch:
+                <br>
+                <br>
+                <img class="imgHalf" src="images/581Project2/Refined/Josep_Refined (2).jpg">
+                <img class="imgHalf" style="float:right" src="images/581Project2/Refined/Josep_Refined (1).jpg">
+                <br>
+                <br>
+                It consist of a driver/shaft where the skittles are queued up for sorting.
+                The driver/shaft holds the skittles in place for the first servo motor to move them in place to the color sensor.
+                The color sensor identifies which color the skittle is and moves the second servo motor with the ramp attached so that it is in the correct position.
+                With the correct timing set in the Arduino, after the color is determined, the first servo motor moves the skittle away from the color sensor, 
+                and drops it onto the ramp so that the skittle could fall into the correct cup.
+                The first servo motor than moves back into its original position to fetch the next skittle that is being queued up in the driver/shaft.
+                <br>
+                <br>
+                All of the communication between these individual parts are connected through the arduino, 
+                and the implementation logic/detail of it could be found in the source code section that links to our github page.
+                <br>
+                Here is an sketch of how everything is wired up in our project:
+                <br>
+                <br>
+                <img class="imgHalf" src="images/581Project2/Refined/Josep_Refined (3).jpg">
+
+                <br>
+                <h3>Actual Images from Implementation</h3>
+                The first servo motor that is directly below the driver/shaft is responsible for moving the skittles to the color sensor, and dropping it onto the ramp:
+                <br>
+                <br>
+                <img class="imgHalf" src="images/581Project2/IMP1.jpg">
+                <br>
+                <br>
+                The second servo motor is attached to the ramp, and aligns the ramp so that the skittle drops into the correct place:
+                <br>
+                <br>
+                <img class="imgHalf" src="images/581Project2/IMP2.jpg">
+                <br>
+                <br>
+                The final demo could be viewed in video section, and here is the image of the finished product:
+                <br>
+                <br>
+                <img class="imgHalf" src="images/581Project2/IMP3.jpg">
+            </p>
+            <h2>Source Code</h2>
+            <p>
+                The source code for our project can be found at the following link to <a href="https://github.com/muhannadnouri/CPSC_581-Assgn2"><i>GitHub</i></a>
+            </p>
+            <h2>Video</h2>
+            <p>
+                This is a video demonstrating the skittle sorter in action:
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ThXtR1ksnCI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </p>
+            <h2>Group Members</h2>
+            <p>
+            <ul>
+                <li>Alexander Lam</li>
+                <li>Joseph Gorospe</li>
+                <li>Michael Verwaayen</li>
+                <li>Mitchell Rudy</li>
+                <li>Muhannad Nouri</li>
+            </ul> 
+            </p>
+            <br>
+    </section>
+    <section>
+            <h1 class="sectionHeader">CPSC 581 <span>Project 1: Screen Unlock</span></h1>
+            <img src="images/581Project1/icon.png">
+            <h2>Context</h2>
+            <p>
+                The goal of this project is to design a unlock mechanism that is an alternative to the classical "Slide to Unlock" found on the IPhone.
+                There will be two main parts to this project as a unlock mechanism based on both touch and sensors is needed.
+                For our group, we have settled on using a trivia/combo for the touch unlock and the accelerometer for the sensor unlock.
+            </p>
+            <h2>Rough Sketches</h2>
+            <p>
+                For my initial 10 sketches, it is just a process of me trying to get down as many ideas as possible.
+                I ended up with 3 sketches that were sensor based, and 7 that were touch based.
+                In this initial phase, my sketches just focused on the different way it is possible to provide an unlock mechanism. 
+                There is no main focus other than exploring the different ways it is possible to have a lock screen mechanism.
+                <br>
+                <br>
+                The following are my 10 Rough Sketches. For all the sketches of the group, visit the <a href="gallery.html#581P1Rough"><i>Gallery Page</i></a>:
+                <h3>Touch Based Sketches</h3>
+                <div class="gallery">
+                    <img src="images/581Project1/Alex/Alex_Sketch_1.jpg" alt="Touch Sketch">
+                    <img src="images/581Project1/Alex/Alex_Sketch_3.jpg" alt="Touch Sketch">
+                    <img src="images/581Project1/Alex/Alex_Sketch_4.jpg" alt="Touch Sketch">
+                    <img src="images/581Project1/Alex/Alex_Sketch_6.jpg" alt="Touch Sketch">
+                    <img src="images/581Project1/Alex/Alex_Sketch_7.jpg" alt="Touch Sketch">
+                    <img src="images/581Project1/Alex/Alex_Sketch_8.jpg" alt="Touch Sketch">
+                    <img src="images/581Project1/Alex/Alex_Sketch_9.jpg" alt="Touch Sketch">
+                </div>
+                <h3>Sensor Based Sketches</h3>
+                <div class="gallery">
+                    <img src="images/581Project1/Alex/Alex_Sketch_2.jpg" alt="Sensor Sketch">
+                    <img src="images/581Project1/Alex/Alex_Sketch_5.jpg" alt="Sensor Sketch">
+                    <img src="images/581Project1/Alex/Alex_Sketch_10.jpg" alt="Sensor Sketch">
+                </div>
+            </p>
+
+            <h2>Refined Sketches</h2>
+            <p>
+                After some further discussion within the group, we settled on the idea of using an accelerometer for the sensor based application and a combo/trivia lock for the touch based application.
+                It was also at this point that we each member of our group presented the ideas they liked the most to the class.
+                Out of all the ideas, the advertisement based lock screen and door key unlock seems to have recieved the most attention in the feedback we were given.
+                It was basically settled after recieving the feedback that our team would proceed with these two ideas as the key could be implemented with an accelerometer,
+                and a trivia/combination element could be added to the advertisements as we agreed upon earlier in the design proccess.
+                <br>
+                <br>
+                With this direction in mind, the following is a collage of the 10 refined sketches we decided on as a group. For all of the refined sketches done, visit the <a href="gallery.html#581P1Refined"><i>Gallery Page</i></a>:
+            </p>
+            <img class="imgFull" src="images/581Project1/Refined_1.jpg" alt="Refined Sketch1">
+            <img class="imgFull" src="images/581Project1/Refined_2.jpg" alt="Refined Sketch2">
+            <br>
+            <h2>Implementation</h2>
+            <p>
+                <h3>Touch Based Unlock:</h3>
+                <p>
+                    The touch based advertisement lockscreen was implemented in Android Studio.
+                    It consisted of a single screen where several different advertisements are displayed.
+                    The user would have to tap on the advertisements to close them, and in the case of our lockscreen,
+                    they would have to be closed in the correct order. 
+                    <br>
+                    If they are not closed in the correct order,
+                    the user would be presented with an additional video advertisement which they would have to watch through.
+                    After the video is done playing, they will be brought back to the same screen where they would have to close the advertisements again.
+                    <br>
+                    If they are closed int he correct order, the user would be presented with a success message, and the phone screen would unlock.
+                    The correct order that the advertisements needs to be closed in is as follows:
+                    <ol>
+                        <li>Reebok</li>
+                        <li>Copy/Paste</li>
+                        <li>Lose Weight</li>
+                        <li>Game of War</li>
+                        <li>Windows Prompt</li>
+                        <li>Bud Light</li>
+                        <li>Local Singles</li>
+                    </ol>
+                    <br>
+                    To see the lock screen in action, check out this video <i>(note: there is audio)</i>:
+                    <br>
+                    <br>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/xMwIyFzVys0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </p> 
+                <br>
+                <h3>Sensor Based Unlock:</h3>
+                <p>
+                    The sensor based key lockscreen was implemented using React Native Expo.
+                    The user is presented with 7 different keys that can be used to unlock the phone.
+                    By swiping left and right, the user would be able to select the different keys that are avaliable to them.
+                    Once the user has decided on the key they want to use, the would have to perform a twist motion counter clock-wise to unlock the phone.
+                    This is assuming that the phone was held facing upwards, and is twisted counter clock-wise till the phone is facing downwards.
+                    While the twist motion is being performed, the phone will emit a sound to let the user know that it is detecting the key being used to unlock the phone.
+                    All of the keys emit the same sound when turned, except the Pokemon Key Card which has a different sound clip.
+                    <br>
+                    If the incorrect key is chosen, the user would be presented with a red background, and a error tone.
+                    <br>
+                    If the correct key is chosen, the user would be presented with a green background, and a success tone.
+                    The lockscreen would then wait a few seconds, and the phone would unlock. 
+                    There is a total of 7 different keys, but the only key that works is the Zelda key, which is the last one.
+                    <br>
+                    <br>
+                    To see the lock screen in action, check out this video <i>(note: there is audio)</i>:
+                    <br>
+                    <br>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-o7-d0jJUZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </p> 
+            </p>
+            <br>
+            <h2>Source Code</h2>
+            <p>
+                The source code for our project can be found at the following link to <a href="https://github.com/muhannadnouri/CPSC_581-Assgn1"><i>GitHub</i></a>
+            </p>
+            <h2>Demo/Deployment</h2>
+            <p>
+                Please remember that both the touch and sensor based lockscreen does have sound, so for the full experince, please have the volume enabled.
+                <h3>Touch Based Unlock:</h3>
+                <p>
+                    The source code for this is located at the Github link posted above in the MyApplication folder.
+                    <br>
+                    Follow these instructions to run it:
+                    <ul>
+                        <li>To run the application, download Android Studio from the official website</li>
+                        <li>Choose Nexus 5X as the emulator device running Android 9, API 28</li>
+                        <li>Alternatively, connect your Android phone to the computer and select it as the target device</li>
+                    </ul>
+                </p>
+                <h3>Sensor Based Unlock:</h3>
+                <p>
+                    The source code for this is located at the Github link posted above in the SensorApplication folder.
+                    <br>
+                    However, since the application was built using React Native Expo, it is advised that you do not build the application yourself 
+                    as it requires having both Node.js, Git command line, and the correct React Native and Expo libraries installed.
+                    <br>
+                    The easiest way to run the application would be the following:
+                    <ul>
+                        <li>Install the application directly onto your device with this <a href="https://github.com/muhannadnouri/CPSC_581-Assgn1/blob/master/SensorApplication/CPSC581Key.apk">APK file</a></li>
+                        <li>Alternatively, download the Expo App from the Google Play Store and scan this QR Code:</li>
+                    </ul>
+                    <img src="images/581Project1/ExpoQRCode.png">
+                </p>
+            </p>
+            <h2>Group Members</h2>
+            <p>
+               <ul>
+                   <li>Alexander Lam</li>
+                    <li>Joseph Gorospe</li>
+                    <li>Michael Verwaayen</li>
+                    <li>Mitchell Rudy</li>
+                    <li>Muhannad Nouri</li>
+               </ul> 
+            </p>
+            <br>
+    </section>
+    <section>
+            <h1 class="sectionHeader">CPSC 581 <span>Project 0: The Donald Trump Button</span></h1>
+            <img src="images/581Project0/TrumpButton.PNG">
+            <h2>Context</h2>
+            <p>
+                After forming our groups, we talked about the potential characters we can use for our button. At the end, we decided to do our button on Donald Trump.
+                Initially, during the first meeting, there were many ideas thrown around such as Batman, Superman, Trump, Gordon Ramsay, or even on one of our group members.
+                After the initial meeting, we did not manage to settle on a final character, so we just decided to each do some sketching for potential button ideas.
+            </p>
+            <br>
+            <h2>Rough Sketches</h2>
+            <p>
+                Since we did not decide on a final character yet, I decided to focus on coming up with different forms a button could take.
+                I needed some sort of symbol to start sketching, so I picked Batman as a starting point.
+                All of my rough sketch focused on the different things a button can do so the sketches were used to manily demonstrate functionality.
+                If in case the character were to be changed in the future, I can still apply the same functionality in these rough sketches to that character.
+                <br>
+                Here are 2 of my 10 rough sketches. For all of the sketchs, visit the <a href="gallery.html#581P0Rough"><i>Gallery Page</i></a>:
+            </p>
+            <img class="imgHalf" src="images/581Project0/sketch1.jpg" alt="Sketch1">
+            <img class="imgHalf" src="images/581Project0/sketch8.jpg" alt="Sketch2">
+            <br>
+            <h2>Refined Sketches</h2>
+            <p>
+                After the second meeting, we decided that the character of our button will be Donald Trump. With that in mind, we started to do our refined sketches.
+                The first thing that came to my mind with Trump is the wall and his famous quotes. 
+                My two refined sketches reflect this as I imagine our button doing something with different type of walls, and also having him say his quotes through audio.
+                <br>
+                Here are the 2 refined sketches that I have done for the group. For All of the refined sketches, visit the <a href="gallery.html#581P0Refined"><i>Gallery Page</i></a>:
+            </p>
+            <img class="imgHalf" src="images/581Project0/RSketch1.jpg" alt="Refined Sketch1">
+            <img class="imgHalf" src="images/581Project0/RSketch2.jpg" alt="Refined Sketch2">
+            <br>
+            <h2>Implementation</h2>
+            <p>
+                Our group decided to use HTML, CSS, and Javascript to implement our button.
+                We settled with having 5 different interactions which included default, hover, idle, click and rightclick.
+                All of these interactions will come from the different ideas that we got from our sketches.
+                After recieving feedback from the class, we decided to modify our plans and add in the ideas of tweets as that is an iconic part of Trumps character.
+                <br>
+                Most of our interactions have sound built in.
+                <h3>Default</h3>
+                <p>
+                    When Trump is not interacted with, he is in his default bored state:
+
+                </p>
+                <img src="images/581Project0/Bored_Trump_gif.gif" alt="default interaction">
+                <h3>Hover</h3>
+                <p>
+                    When you hover over Trump, he is happy for attention:
+
+                </p>
+                <img src="images/581Project0/Happy_Trump_gif.gif" alt="hover interaction">
+                <h3>Idle</h3>
+                <p>
+                    When you do not move the mouse at all, Trump will slowly morph into Cheeto Trump:
+                </p>
+                <img src="images/581Project0/Trump_to_Cheeto_V3.gif" alt="idle interaction">
+                <h3>Click</h3>
+                <p>
+                    For our click, we decided to use the idea that we recieved from class, and that is trump sending out tweets.
+                    Whenever you click on him, he will get more and more mad as he turns more red and send out tweets.
+                    When he reaches his max state, he will start saying one of his quotes.
+                </p>
+                <img src="images/581Project0/Angry_Trump_gif.gif" alt="click interaction">
+                <br>
+                <img src="images/581Project0/tweetTrump1.png" alt="click interaction">
+                <img src="images/581Project0/tweetTrump2.png" alt="click interaction">
+                <h3>Right Click</h3>
+                <p>
+                    For our right click, we decided to have a wall be built over him. In this state, he cannot be interacted with:
+                </p>
+                <img src="images/581Project0/wallTrump1.png" alt="right click interaction">
+                <img src="images/581Project0/wallTrump2.png" alt="right click interaction">
+                <img src="images/581Project0/wallTrump3.png" alt="right click interaction">
+            </p>
+            <br>
+            <h2>Source Code</h2>
+            <p>
+                The source code for our project can be found at the following link to <a href="https://github.com/muhannadnouri/CPSC_581-Assgn0"><i>GitHub</i></a>
+            </p>
+            <h2>Demo/Deployment</h2>
+            <p>
+                Our button is hosted and could be played with at this <a href="https://trumpbutton.netlify.com/"><i>link</i></a>
+                <br>
+                Please remember that our button does has sound, so for the full experince, please have sound on.
+            </p>
+            <h2>Video</h2>
+            <p>
+                This is a video demonstrating the button:
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Afbi6-c6D5s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </p>
+            <h2>Group Members</h2>
+            <p>
+               <ul>
+                   <li>Alexander Lam</li>
+                    <li>Joseph Gorospe</li>
+                    <li>Michael Verwaayen</li>
+                    <li>Mitchell Rudy</li>
+                    <li>Muhannad Nouri</li>
+               </ul> 
+            </p>
+            <br>
+    </section>
+    <section>
+        <h1 class="sectionHeader">SENG 513 <span>Web Based Systems: Project</span></h1>
+        <p>
+            This is a placeholder for an upcoming web based system project.
+            <br>
+        </p>
+        <img src="images/webTech.png">
+    </section>
+    <footer>
+        <nav>
+            <ul>
+                <li><a id="active" href="project.html">Projects</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li>
+                    <a id="navIndex" href="index.html">
+                        <h1>
+                            Alexander Lam 
+                            <br>
+                            <span>Web Portfolio</span>
+                        </h1>                    
+                    </a>
+                </li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </footer>
+    
+    <!-- Gallery Modal -->
+    <div id="myModal">
+        <span id="close">&times;</span>
+        <img id="modal-content">
+        <div id="controls"><span>&lt;</span><span>&gt;</span></div>
+    </div>
+</body>
+</html>

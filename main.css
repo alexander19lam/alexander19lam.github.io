@@ -1,0 +1,288 @@
+/* Snowy Day Color Pallate
+#eff2f6	(239,242,246) 
+#73a0c9	(115,160,201)
+#113c65	(17,60,101)
+#3c74a7	(60,116,167)
+#d0e2f2	(208,226,242)
+
+colorScheme {
+    color: #eff2f6;
+    color: #73a0c9;
+    color: #113c65;
+    color: #3c74a7;
+    color: #d0e2f2;
+}
+*/
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #113c65;
+}
+
+body{
+    margin: 0;
+    padding-bottom: 100px;
+    background-image: url("images/circuitBoardBG.jpg")
+}
+
+footer {
+    text-align: center;
+    align-content: center;
+    background-color: #113c65;
+    color: #eff2f6;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    border-width: 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+nav {
+    vertical-align: top;
+    display: inline-block;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    vertical-align: top;
+    padding: 0px;
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:#eff2f6;
+}
+
+nav ul li:not(:nth-child(3)) a{
+    display: inline-block;
+    margin: 0 15px;
+    width: 150px;
+    font-size: 25px;
+    border: #d0e2f2 solid 2px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 8px 16px 0 rgba(239,242,246,0.3), 0 6px 20px 0 rgba(239,242,246,0.29);
+    transition: 0.3s;
+}
+
+nav ul li h1{
+    margin: 0 15px 0 15px;
+    border: 3px solid #eff2f6;
+    width: 300px;
+    font-size: 25px;
+    color: inherit;
+    box-shadow: 0 8px 16px 0 rgba(239,242,246,0.3), 0 6px 20px 0 rgba(239,242,246,0.29);
+    transition: 0.3s;
+}
+
+nav ul li h1 span{
+    font-size: 25px;
+    color: inherit;
+}
+
+
+nav ul li a:hover, nav ul li h1:hover, #active{
+    cursor: pointer;
+    background-color: #73a0c9;
+    box-shadow: 0 8px 16px 0 rgba(239,242,246,0.8), 0 6px 20px 0 rgba(239,242,246,0.79);
+}
+
+section {
+    background-color: #d0e2f2;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    padding: 5px 20px 5px 20px;
+}
+
+#header{
+    background-color: #3c74a7;
+    color: #d0e2f2;
+    border-color: #113c65;
+    border-style: solid;
+    border-width: 10px 0px;
+    padding-left: 30px;
+    position: sticky;
+    top: 0;
+    margin: 0;
+}
+
+#bannerIMG {
+    width: 100%;
+    height: calc(100vh - 100px);
+    vertical-align: middle;
+}
+
+#bannerText {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    color:white;
+    font-size: 3em;
+    transform: translateX(-50%) translateY(-50%)
+}
+
+.sectionHeader {
+    color: #3c74a7;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 3px;
+}
+
+.sectionHeader span {
+    font-weight: normal;
+    border-left: 1px solid #aaa;
+    padding-left: 10px;
+    margin-left: 10px;
+    color: #113c65;
+}
+
+section img {
+    width: 25%;
+}
+
+.imgHalf {
+    width: 50%;
+}
+
+.imgFull {
+    width: 100%;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+.contactTable th {
+    text-align: left;
+    color: #3c74a7;
+}
+
+.contactTable td {
+    padding: 5px 10px;
+}
+
+.contactTable td {
+    border-bottom: 2px solid #aaa;
+}
+.contactTable tr:nth-child(2) td {
+    border-top: 2px solid #aaa;
+}
+
+.contactTable tr td:last-child {
+    border-left: 2px solid #aaa;
+    padding-left: 20px;
+}
+
+.contactTable tr td:first-child {
+    font-weight: bold;
+    padding-right: 20px;
+}
+
+.gallery img{
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+    border: 5px solid #3c74a7;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery img:hover{
+    border: 8px solid #73a0c9;
+}
+
+.gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+
+/* The Modal (background) */
+#myModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+#myModal #modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    height: 80%;
+}
+
+/* Add Animation - Zoom in the Modal */
+#myModal #modal-content{ 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+#myModal #close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#myModal #controls{
+    position: fixed;
+    bottom:50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+#myModal #controls span{
+    margin: 20px;
+    font-size: 80px;
+    color: #f1f1f1;
+    font-weight: bold;
+    transition: 0.3s;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+#myModal #close:hover,
+#myModal #close:focus,
+#myModal #controls span:hover,
+#myModal #controls span:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    #myModal #modal-content {
+        width: 100%;
+    }
+}
